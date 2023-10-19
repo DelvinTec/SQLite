@@ -34,12 +34,12 @@ class SignupActivity : AppCompatActivity() {
     private fun signupDatabase(username: String, password:String){
         val insertedRowId = databaseHelper.insertUser(username,password)
         if (insertedRowId != -1L){
-            Toast.makeText(this,"Signup Success", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Registro exitoso", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }else{
-            Toast.makeText(this,"Signup Failed", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Registro Fallido", Toast.LENGTH_SHORT).show()
         }
     }
 }
